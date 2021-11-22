@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="movieInfo"
+            type="com.example.altbalajiproject.model.MovieInfo" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".view.MovieInfoActivity">
+
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ns_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:background="@color/teal_200"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/iv_poster1"
+                                android:layout_width="270dp"
+                                android:layout_height="400dp"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textSize="20sp"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/tv_title1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{movieInfo.title}">
+
+                                </TextView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <TextView
+                                    android:paddingRight="2dp"
+                                    android:paddingLeft="2dp"
+                                    android:textColor="@color/grey"
+                                    android:textSize="18sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(">
+
+                                </TextView>
+
+                                <TextView
+                                    android:textSize="18sp"
+                                    android:textColor="@color/grey"
+                                    android:id="@+id/tv_type1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{movieInfo.type}">
+
+                                </TextView>
+
+                                <TextView
+                                    android:paddingRight="2dp"
+                                    android:paddingLeft="2dp"
+                                    android:textColor="@color/grey"
+                                    android:textSize="18sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=")">
+
+                                </TextView>
+
+
+                                <TextView
+                                    android:textColor="@color/grey"
+                                    android:id="@+id/tv_released_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{movieInfo.released}">
+
+                                </TextView>
+
+                                <TextView
+
+                                    android:visibility="gone"
+                                    android:textColor="@color/grey"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=", ">
+
+                                </TextView>
+
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:padding="2dp"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/tv_year1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{movieInfo.year}">
+
+                                </TextView>
+
+                                <TextView
+                                    android:textColor="@color/white"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=", ">
+
+                                </TextView>
+
+
+
+                                <TextView
+                                    android:textColor="@color/grey"
+                                    android:id="@+id/tv_run_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{movieInfo.runtime}">
+
+                                </TextView>
+
+
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:padding="2dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/white"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Genre : ">
+                                </TextView>
+
+
+                                <TextView
+                                    android:textColor="@color/grey"
+                                    android:id="@+id/tv_genre"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{movieInfo.genre}">
+
+                                </TextView>
+
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/white"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Actors : ">
+
+                                </TextView>
+
+                                <TextView
+                                    android:textColor="@color/grey"
+                                    android:id="@+id/actors"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{movieInfo.actors}">
+
+                                </TextView>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/white"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Description : ">
+
+                                </TextView>
+                                <TextView
+                                    android:textColor="@color/grey"
+                                    android:id="@+id/plot"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{movieInfo.plot}">
+
+                                </TextView>
+
+
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:visibility="visible"
+                                android:id="@+id/progressBar4"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@color/grey"
+                                >
+
+                            </ProgressBar>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
